@@ -83,3 +83,37 @@ This script will:
 *   **`get_linkedin_access_token.py`**: Handles the 3-legged OAuth 2.0 flow to get an access token.
 *   **`fetch_airbnb_linkedin_ads.py`**: Fetches all ads for a given advertiser and saves them to a JSON file.
 *   **`plot_airbnb_ad_impressions.py`**: Visualizes the ad impression data from the fetched JSON file.
+
+### Running the Jupyter Notebook
+
+To ensure the Jupyter Notebook (`analysis.ipynb`) runs correctly, please follow these steps:
+
+1.  **Navigate to the repository's root directory:**
+    Open your terminal or command prompt and change your current directory to the root of this repository (`linkedin-ad-library-analyzer`). This is crucial because the notebook uses relative paths to locate necessary files like `.env` and to save data.
+
+    ```bash
+    cd /path/to/your/linkedin-ad-library-analyzer
+    ```
+
+2.  **Verify your current directory (Optional but Recommended):**
+    Before launching Jupyter, you can quickly check if you are in the correct directory by looking for the `.env.example` and `requirements.txt` files.
+
+    ```python
+    import os
+
+    # Check if the necessary files are present
+    required_files = ['.env.example', 'requirements.txt']
+    for f in required_files:
+        if not os.path.exists(f):
+            print(f"Error: Required file '{f}' not found. Please make sure you are running this notebook from the root directory of the repository.")
+            # You might want to exit the notebook here in a real application
+    ```
+
+3.  **Launch Jupyter Notebook:**
+    Once in the correct directory, launch Jupyter Notebook:
+
+    ```bash
+    jupyter notebook
+    ```
+
+    Your web browser should open, displaying the contents of the repository. You can then click on `analysis.ipynb` to open and run the notebook.
